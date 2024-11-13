@@ -1,3 +1,4 @@
+import 'package:bibletrivia/screens/MenuScreen.dart';
 import 'package:bibletrivia/style/palette.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      border: Border.all(color: Palette.primary),
+                      border: Border.all(color: Palette.secondary),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: IconButton(
@@ -49,7 +50,7 @@ class _MainScreenState extends State<MainScreen> {
                           FaIcon(
                             FontAwesomeIcons.gear,  // Outlined heart (regular style)
                             size: 40,
-                            color: Palette.secondary,
+                            color: Palette.primary,
                           ),
                         ],
                       ),
@@ -157,7 +158,7 @@ class _MainScreenState extends State<MainScreen> {
                 child: Container(
                   padding: EdgeInsets.only(top: 18.0, left: 15.0, right: 15.0, bottom: 5.0),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Palette.primary),
+                    border: Border.all(color: Palette.secondary),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text(
@@ -172,11 +173,13 @@ class _MainScreenState extends State<MainScreen> {
               ),
               SizedBox(height: 20,),
               GestureDetector(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => MenuScreen(),));
+                },
                 child: Container(
                   padding: EdgeInsets.only(top: 18.0, left: 15.0, right: 15.0, bottom: 5.0),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Palette.primary),
+                    border: Border.all(color: Palette.secondary),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text(
